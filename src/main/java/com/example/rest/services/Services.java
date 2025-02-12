@@ -1,6 +1,5 @@
 package com.example.rest.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,26 +20,25 @@ public class Services {
 //		list.add(new Book("PHP", "Abhishek", 126, 26000));
 //		list.add(new Book("C++", "Satish", 127, 27000));		
 //	}
-	
+
 	public Book getBookById(int id) {
-		Book book=null;
+		Book book = null;
 		try {
-			book=this.bookrepository.findById(id);
-		}
-		catch(Exception e){
+			book = this.bookrepository.findById(id);
+		} catch (Exception e) {
 			e.printStackTrace();
-			
+
 		}
 		return book;
 	}
-	
-	public List<Book> getBooks(){
-		List<Book> list= (List<Book>)bookrepository.findAll();
-		return list; 
+
+	public List<Book> getBooks() {
+		List<Book> list = (List<Book>) bookrepository.findAll();
+		return list;
 	}
-	
+
 	public Book getBookAuthor(String author) {
-		Book book=bookrepository.findByAuthor(author);
+		Book book = bookrepository.findByAuthor(author);
 //		for(Book book: list) {
 //			if(book.getAuthor().equalsIgnoreCase(author)) {
 //				System.out.println("data is sent");
@@ -48,8 +46,8 @@ public class Services {
 //				
 //			}
 //		}
-     	return book;
-		
+		return book;
+
 	}
 //	
 //	public Book getBook(String book) {
@@ -61,11 +59,12 @@ public class Services {
 //		}
 //		return null;
 //	}
-	
+
 	public Book addBook(Book book) {
-		return bookrepository.save(book);
+		book = bookrepository.save(book);
+		return book;
 	}
-	
+
 //	public Book deleteBook(int bookid) {
 //		for(Book book:list) {
 //			if(book.getId()==bookid) {
@@ -75,6 +74,6 @@ public class Services {
 //		}
 //		
 //		return null;
-		
-	//}
+
+	// }
 }
