@@ -63,8 +63,7 @@ public class Services {
 //	}
 	
 	public Book addBook(Book book) {
-		Book result=bookrepository.save(book);
-		return result;
+		return bookrepository.save(book);
 	}
 	
 //	public Book deleteBook(int bookid) {
