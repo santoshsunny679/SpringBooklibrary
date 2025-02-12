@@ -10,6 +10,7 @@ public class RestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RestApplication.class, args);
 		System.out.println(".............Your spring boot application has started..........");
+		System.out.println("euu mawa git");
 	}
 
 }
