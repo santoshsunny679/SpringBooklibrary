@@ -1,12 +1,16 @@
 package com.example.rest.dao;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.Optional;
 
-import com.example.rest.controllers.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookRepository extends CrudRepository<Book, Integer>{
-	public Book findById(int id);
-	public Book findByAuthor(String author);
-	
+import com.example.rest.entity.Book;
 
+public interface BookRepository extends JpaRepository<Book, Integer> {
+
+	Optional<Book> findByIdAndAuthor(int id, String author);
+
+	Optional<Book> findById(int id);
+
+	Optional<Book> findByAuthor(String author);
 }
