@@ -56,6 +56,8 @@ public class Book {
 	public String toString() {
 		return "Book [book=" + book + ", author=" + author + ", id=" + id + ", price=" + price + "]";
 	}
+	
+	// we are using toString method here to return the book instance.
 	 
 	 
 	 
