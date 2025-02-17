@@ -66,8 +66,9 @@ public class MyController {
 	
 	@PostMapping("/books")
 	public Book addBook(@RequestBody Book book){
-		return services.addBook(book);
-		// here we have sent the book to service layer
+		//Changes done by Abhishek
+		Book b= services.addBook(book);
+		return b;
 	}
 	
 //	@DeleteMapping("/Books/{id}")
