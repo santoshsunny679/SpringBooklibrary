@@ -8,17 +8,13 @@ public class Book {
 	 private int price;
 	 
 	public Book(String book, String author, int id, int price) {
-		super();
 		this.book = book;
 		this.author = author;
 		this.id = id;
 		this.price = price;
 	}
 
-	public Book() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	public Book() {}
 
 	public String getBook() {
 		return book;
@@ -56,15 +52,6 @@ public class Book {
 	public String toString() {
 		return "Book [book=" + book + ", author=" + author + ", id=" + id + ", price=" + price + "]";
 	}
-	
-	// we are using toString method here to return the book instance
-	
-	// new changes done by abhishek please check it once.
-	 
-	 
-	 
-	 
-	 
 	 
 }
 
